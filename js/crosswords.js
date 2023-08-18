@@ -421,6 +421,9 @@ function select_word(sens, pos_x, pos_y, word, definition) {
             var span = document.createElement("span");
             span.innerText = word[k];
             span.id = "inp_lettre_" + k;
+            span.style.border = "1px solid black";
+            span.style.width = "30px";
+            span.style.height = "30px";
             div_g.appendChild(span);
         } else {
             var inp = document.createElement("input");
@@ -462,10 +465,6 @@ function select_word(sens, pos_x, pos_y, word, definition) {
         }
 
     }
-}
-
-function keydown_next_focus(prev_inp, next_inp) {
-
 }
 
 function validate_word_guess() {
