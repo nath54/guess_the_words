@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Guess the words !</title>
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="bug">
+        <p>Loading data...</p>
+    </div>
+
+    <div id="correct" style="display:none;">
+
+        <div id="header">
+
+        </div>
+
+        <div id="row_or_col_container">
+
+            <div id="main_container" class="m15">
+
+                <div id="crossword_grid">
+
+                    <table id="crossword_table">
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div id="side_container" class="m15">
+
+                <div id="div_word_definition" class="m15">
+
+                    <b>Selected word : </b>
+                    <p id="word_definition"></p>
+
+                </div>
+
+                <div id="guess_word" class="row m15">
+
+
+
+                </div>
+
+                <div class="m15">
+                    <button onclick="validate_word_guess();">Validate</button>
+                </div>
+
+                <span id="guess_result"></span>
+
+            </div>
+
+        </div>
+
+        <div id="footer">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    var data_script = parseInt(Math.random() * 3) + 1;
+    var script = document.createElement("script");
+    script.setAttribute("src", "data/data" + data_script + ".js");
+    script.setAttribute("type", "text/javascript");
+    document.body.appendChild(script);
+</script>
