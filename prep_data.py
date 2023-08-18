@@ -26,7 +26,7 @@ for k in tqdm(data_keys_part1):
     if data[k].startswith("See ") or data[k].startswith("Same as") or len(data[k]) < 15 or len(data[k]) > 150:
         continue
     else:
-        data_part1[k] = data[k]
+        data_part1[k] = data[k].replace("\n", " ")
 
 txt1 = f"""const data_words = {json.dumps(data_part1)};
 
@@ -45,7 +45,7 @@ for k in tqdm(data_keys_part2):
     if data[k].startswith("See ") or data[k].startswith("Same as") or len(data[k]) < 15 or len(data[k]) > 150:
         continue
     else:
-        data_part2[k] = data[k]
+        data_part2[k] = data[k].replace("\n", " ")
 
 txt2 = f"""const data_words = {json.dumps(data_part2)};
 
@@ -64,7 +64,7 @@ for k in tqdm(data_keys_part3):
     if data[k].startswith("See ") or data[k].startswith("Same as") or len(data[k]) < 15 or len(data[k]) > 150:
         continue
     else:
-        data_part3[k] = data[k]
+        data_part3[k] = data[k].replace("\n", " ")
 
 txt3 = f"""const data_words = {json.dumps(data_part3)};
 
@@ -83,7 +83,7 @@ for k in tqdm(data_keys_part4):
     if data[k].startswith("See ") or data[k].startswith("Same as") or len(data[k]) < 15 or len(data[k]) > 150:
         continue
     else:
-        data_part4[k] = data[k]
+        data_part4[k] = data[k].replace("\n", " ")
 
 txt4 = f"""const data_words = {json.dumps(data_part4)};
 
