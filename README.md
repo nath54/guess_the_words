@@ -1,3 +1,3 @@
 # guess_the_words
 
-A simple little word guessing game.
+A simple little word guessing game, made in one day.
